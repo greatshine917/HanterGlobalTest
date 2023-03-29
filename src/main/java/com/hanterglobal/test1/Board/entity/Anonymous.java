@@ -1,4 +1,4 @@
-package com.hanterglobal.test1.article.entity;
+package com.hanterglobal.test1.Board.entity;
 
 import jakarta.persistence.Entity;
 

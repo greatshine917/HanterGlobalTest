@@ -1,4 +1,4 @@
-package com.hanterglobal.test1.article;
+package com.hanterglobal.test1.Board;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
