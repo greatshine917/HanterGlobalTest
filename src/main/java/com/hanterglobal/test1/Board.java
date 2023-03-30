@@ -15,7 +15,7 @@ public class Board {
 
         this.categories = new HashMap<>();
         this.posts = new ArrayList<>();
-        initializeCategories();
+        registeredCategories();
     }
 
     public void addPost(String title, String content, String categoryId) throws IllegalAccessException {
@@ -39,9 +39,8 @@ public class Board {
         return searchPost;
     }
 
-    public String getJson() {
-        List<Category> categoryList = new ArrayList<>(categories.values());
-        return new Gson().toJson(categoryList);
+    public String getJson(List<Post> searchPost) {
+        return new Gson().toJson(searchPost);
     }
 
     private boolean checkCategory(String parentIdx, String childId) throws IllegalAccessException {
@@ -63,7 +62,7 @@ public class Board {
         return false;
     }
 
-    private void initializeCategories() {
+    private void registeredCategories() {
         categories.put("male", new Category(0, 1));
         categories.put("female", new Category(0, 2));
         categories.put("boyGroup", new Category(1, 3));
